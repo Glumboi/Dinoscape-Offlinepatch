@@ -13,6 +13,7 @@ Offline server for Dinoscape (WIP). Right now its mostly a POC
 # Requirements
 
 - The Game
+- MelonLoader installed to the game
 - A tool to rip assets from the game 
 
 # How to
