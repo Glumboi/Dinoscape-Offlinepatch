@@ -1,6 +1,9 @@
 # DinoScapeOffline
 Offline server for Dinoscape (WIP). Right now its mostly a POC 
 
+# Demonstration
+![Alt Text](screenshots/demo1.png)
+
 # Build-Requirements
 
 - Visual Studio >= 2022
