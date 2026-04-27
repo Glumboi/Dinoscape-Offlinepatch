@@ -1,6 +1,12 @@
 # DinoScapeOffline
 Offline server for Dinoscape (WIP). Right now its mostly a POC 
 
+# Build-Requirements
+
+- Visual Studio >= 2022
+- .NET >= 9 (for the Server)
+- .NET Framework >= 4.8 (for the Mod itself)
+
 # Requirements
 
 - The Game
@@ -13,6 +19,7 @@ Offline server for Dinoscape (WIP). Right now its mostly a POC
 - Now locate the following folder: Assets->Resources->customs
 - Copy and paste this folder next to the server executable, or alternatively where you specified the customs path inside "serverConf.ini"
 - Launch the server and the game with the mod installed and you should be good to go (server needs to be active if you want to play the game)
+- Login with any credentials 
 
 # What this is not
 
