@@ -21,7 +21,7 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-src/Output
+src/Output/
 x64/
 x86/
 [Ww][Ii][Nn]32/
