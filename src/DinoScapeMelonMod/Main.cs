@@ -1,7 +1,12 @@
-﻿using MelonLoader;
-using UnityEngine;
-using DinoScapeOffline.Patches;
+﻿using DinoScapeOffline.Patches;
+using Harmony;
+using Il2Cpp;
+using MelonLoader;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using UnityEngine;
+using static Il2CppSystem.Globalization.CultureInfo;
 
 namespace DinoScapeOffline
 {
@@ -35,5 +40,19 @@ namespace DinoScapeOffline
             }
             MelonLogger.Msg($"Read new address: {NewServerAddress}");
         }
+
+        public override void OnUpdate()
+        {
+#if _DEBUG
+            if (UnityEngine.Input.GetKeyDown(KeyCode.F2))
+            {
+                var data = ItemMaker.LoadEquipmentFromIni(@"");
+                var list = new List<EquipmentData>(ContentHolder.Instance.allCustoms);
+                list.Add(data);
+                ContentHolder.Instance.allCustoms = list.ToArray();
+                MelonLogger.Msg($"added item: {ContentHolder.Instance.allCustoms.Last().eName}");
+            }
+        }
+#endif
     }
 }

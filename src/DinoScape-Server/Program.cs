@@ -45,6 +45,16 @@ namespace HttpListenerExample
             listener.Start();
 
             Console.WriteLine("Listening on " + url);
+
+#if _DEBUG // -> Testing custom items
+            InventoryItem item = new InventoryItem();
+            item.Desc = "This is a test description!\n";
+            item.ItemId = "TestID";
+            item.ItemInstanceId = "Test name";
+            item.CatalogVersion = HttpServerSettings.CATALOG_VERSION;
+            item.PriceEmeralds = 0;
+            PlayerItems.Add(item);
+#endif
             RegisterRoutes();
             HandleIncomingConnections().GetAwaiter().GetResult();
             listener.Close();

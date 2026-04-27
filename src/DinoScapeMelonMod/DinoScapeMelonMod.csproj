@@ -343,10 +343,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemMaker.cs" />
     <Compile Include="Patches\DinoInfoPatches.cs" />
     <Compile Include="Patches\PlayFabPatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="SimpleIni.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

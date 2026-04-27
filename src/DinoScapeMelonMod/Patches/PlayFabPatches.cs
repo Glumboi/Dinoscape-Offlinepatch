@@ -77,17 +77,21 @@ namespace DinoScapeOffline.Patches
         [HarmonyPrefix]
         private static bool Prefix_GetFullUrl(ref string __result, string apiCall, Il2CppSystem.Collections.Generic.Dictionary<string, string> getParams)
         {
+#if _DEBUG
             MelonLogger.Msg($"apiCall: {apiCall}");
             MelonLogger.Msg($"getParams:");
             foreach (var kvp in getParams)
             {
                 MelonLogger.Msg($"{kvp.key} : {kvp.value}");
             }
+#endif
             requestBuilder.Append(DinoScapeOffline.AddressInjector.NewServerAddress);
             requestBuilder.Append(apiCall);
             __result = requestBuilder.ToString();
             requestBuilder.Clear();
+#if _DEBUG
             MelonLogger.Msg($"Modifed URL: {__result}");
+#endif
             return false;
         }
     }
