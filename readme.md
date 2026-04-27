@@ -1,3 +1,6 @@
+# DinoScapeOffline
+Offline server for Dinoscape (WIP). Right now its mostly a POC 
+
 # Requirements
 
 - The Game
