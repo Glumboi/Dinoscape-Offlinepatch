@@ -31,20 +31,24 @@ namespace HttpListenerExample
         private static Dictionary<string, Func<HttpListenerRequest, Task<string>>> routes
             = new Dictionary<string, Func<HttpListenerRequest, Task<string>>>();
 
-        private static ServerConfig ServerConfig = ConfigLoader.LoadConfig(ServerConfig.DEFAULT_PATH);
-        private static List<InventoryItem> PlayerItems = ServerSetup.InitPlayerInventory(ServerConfig.CustomsPath);
+        private static ServerConfig ServerConfig;
+        private static List<InventoryItem> PlayerItems;
 
         public static HttpListener listener;
-        public static string url = $"{ServerConfig.Address}:{ServerConfig.Port}/";
-        public static int requestCount = 0;
+        public static string NewURL;
+        public static int RequestCount = 0;
 
         public static void Main(string[] args)
         {
+            ServerConfig = ConfigLoader.LoadConfig($"{AppDomain.CurrentDomain.BaseDirectory}\\{ServerConfig.CONFIG_FILE}");
+            PlayerItems = ServerSetup.InitPlayerInventory(ServerConfig.CustomsPath);
+            NewURL = $"{ServerConfig.Address}:{ServerConfig.Port}/";
+
             listener = new HttpListener();
-            listener.Prefixes.Add(url);
+            listener.Prefixes.Add(NewURL);
             listener.Start();
 
-            Console.WriteLine("Listening on " + url);
+            Console.WriteLine("Listening on " + NewURL);
 
 #if _DEBUG // -> Testing custom items
             InventoryItem item = new InventoryItem();
@@ -86,7 +90,7 @@ namespace HttpListenerExample
             var req = ctx.Request;
             var resp = ctx.Response;
 
-            Console.WriteLine($"#{++requestCount} {req.HttpMethod} {req.Url.AbsolutePath}");
+            Console.WriteLine($"#{++RequestCount} {req.HttpMethod} {req.Url.AbsolutePath}");
 
             string key = $"{req.HttpMethod}:{req.Url.AbsolutePath}";
 

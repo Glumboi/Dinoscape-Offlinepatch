@@ -13,7 +13,7 @@ namespace DinoScape_Server
         public string Port { get; set; } = "8000";
         public bool UnlockAll { get; set; } = true;
 
-        public const string DEFAULT_PATH = "./serverConf.ini";
+        public const string CONFIG_FILE = "serverConf.ini";
     }
 
     public static class ConfigLoader

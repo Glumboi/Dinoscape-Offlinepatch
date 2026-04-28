@@ -19,7 +19,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>None</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>$(SolutionDir)Output\</OutputPath>
+    <OutputPath>..\Output\ClientMod\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -27,319 +27,423 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Prefer32Bit>false</Prefer32Bit>
     <DebugSymbols>false</DebugSymbols>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\Lib\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\Lib\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\Lib\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppCinemachine">
       <HintPath>Lib\Il2CppCinemachine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2Cppcom.unity.multiplayer-hlapi.Runtime">
       <HintPath>Lib\Il2Cppcom.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppInterop.Runtime">
       <HintPath>..\Lib\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppMono.Security">
       <HintPath>Lib\Il2CppMono.Security.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2Cppmscorlib, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\SteamLibrary\steamapps\common\DinoScape\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhoton3Unity3D">
       <HintPath>Lib\Il2CppPhoton3Unity3D.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhotonChat">
       <HintPath>Lib\Il2CppPhotonChat.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhotonRealtime">
       <HintPath>Lib\Il2CppPhotonRealtime.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhotonUnityNetworking">
       <HintPath>Lib\Il2CppPhotonUnityNetworking.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhotonUnityNetworking.Demos">
       <HintPath>Lib\Il2CppPhotonUnityNetworking.Demos.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhotonUnityNetworking.Utilities">
       <HintPath>Lib\Il2CppPhotonUnityNetworking.Utilities.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPhotonWebSocket">
       <HintPath>Lib\Il2CppPhotonWebSocket.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPlayFab">
       <HintPath>..\Lib\Il2CppPlayFab.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppPurchasing.Common">
       <HintPath>Lib\Il2CppPurchasing.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppSystem">
       <HintPath>Lib\Il2CppSystem.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppSystem.Configuration">
       <HintPath>Lib\Il2CppSystem.Configuration.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppSystem.Core">
       <HintPath>Lib\Il2CppSystem.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppSystem.Xml">
       <HintPath>Lib\Il2CppSystem.Xml.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Il2CppV_Animation">
       <HintPath>Lib\Il2CppV_Animation.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\Lib\MelonLoader.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="Unity.Mathematics">
       <HintPath>Lib\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Lib\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Lib\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Lib\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Lib\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Lib\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Lib\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\Lib\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
       <HintPath>Lib\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Lib\UnityEngine.Advertisements.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>Lib\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
       <HintPath>Lib\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>Lib\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
       <HintPath>Lib\UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>Lib\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
       <HintPath>Lib\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>Lib\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\Lib\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
       <HintPath>Lib\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
       <HintPath>Lib\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
       <HintPath>Lib\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
       <HintPath>Lib\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GIModule">
       <HintPath>Lib\UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
       <HintPath>Lib\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
       <HintPath>Lib\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
       <HintPath>Lib\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>..\Lib\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>..\Lib\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
       <HintPath>Lib\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>Lib\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
       <HintPath>Lib\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
       <HintPath>Lib\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
       <HintPath>Lib\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
       <HintPath>..\Lib\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>Lib\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
       <HintPath>Lib\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Lib\UnityEngine.Purchasing.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.AppleCore">
       <HintPath>Lib\UnityEngine.Purchasing.AppleCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.AppleMacosStub">
       <HintPath>Lib\UnityEngine.Purchasing.AppleMacosStub.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.AppleStub">
       <HintPath>Lib\UnityEngine.Purchasing.AppleStub.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
       <HintPath>Lib\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
       <HintPath>Lib\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Stores">
       <HintPath>Lib\UnityEngine.Purchasing.Stores.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.WinRTCore">
       <HintPath>Lib\UnityEngine.Purchasing.WinRTCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.WinRTStub">
       <HintPath>Lib\UnityEngine.Purchasing.WinRTStub.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
       <HintPath>Lib\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
       <HintPath>Lib\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
       <HintPath>Lib\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
       <HintPath>Lib\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
       <HintPath>Lib\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
       <HintPath>Lib\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
       <HintPath>Lib\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule">
       <HintPath>Lib\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
       <HintPath>Lib\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
       <HintPath>Lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextCoreModule">
       <HintPath>Lib\UnityEngine.TextCoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>Lib\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
       <HintPath>Lib\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
       <HintPath>Lib\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
       <HintPath>Lib\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIElementsNativeModule">
       <HintPath>Lib\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>Lib\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
       <HintPath>Lib\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
       <HintPath>Lib\UnityEngine.UNETModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
       <HintPath>Lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
       <HintPath>Lib\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityCurlModule">
       <HintPath>Lib\UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
       <HintPath>Lib\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
       <HintPath>Lib\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
       <HintPath>Lib\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
       <HintPath>Lib\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
       <HintPath>Lib\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
       <HintPath>Lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
       <HintPath>Lib\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
       <HintPath>Lib\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>Lib\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
       <HintPath>Lib\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>Lib\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>Lib\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -370,6 +474,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /q/y/i "$(TargetPath)" "D:\Steam\steamapps\common\DinoScape\Mods\" /E /H /C</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

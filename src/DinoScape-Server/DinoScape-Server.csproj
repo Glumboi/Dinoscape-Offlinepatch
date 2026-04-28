@@ -6,6 +6,9 @@
     <RootNamespace>DinoScape_Server</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <BaseOutputPath>..\Output\Server</BaseOutputPath>
+    <PackageOutputPath>..\Output\Server</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
