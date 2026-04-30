@@ -2,6 +2,7 @@
 
 using DinoScape_Server;
 using Il2CppPlayFab.AdminModels;
+using Il2CppPlayFab.ClientModels;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -112,7 +113,7 @@ namespace HttpListenerExample
                     await SendJsonResponse(resp, JsonSerializer.Serialize(new
                     {
                         code = 404,
-                        status = "Not Found",
+                        status = "Error",
                         data = new { }
                     }));
                 }
@@ -197,7 +198,7 @@ namespace HttpListenerExample
                 status = "OK",
                 data = new
                 {
-                    UserInfo = new
+                    AccountInfo = new
                     {
                         PlayFabId = HttpServerSettings.PLAYFAB_ID,
                         Username = HttpServerSettings.PLAYFAB_USERNAME,
