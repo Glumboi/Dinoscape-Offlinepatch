@@ -41,8 +41,39 @@ namespace HttpListenerExample
 
         public static void Main(string[] args)
         {
-            ServerConfig = ConfigLoader.LoadConfig($"{AppDomain.CurrentDomain.BaseDirectory}\\{ServerConfig.CONFIG_FILE}");
-            PlayerItems = ServerSetup.InitPlayerInventory(ServerConfig.CustomsPath);
+            ServerConfig = ConfigLoader.LoadConfig($"{AppDomain.CurrentDomain.BaseDirectory}{ServerConfig.CONFIG_FILE}");
+            string itemsPath = $"{AppDomain.CurrentDomain.BaseDirectory}{ServerConfig.ItemsLocation}";
+
+            if (Directory.Exists(itemsPath))
+            {
+                PlayerItems = new();
+                var files = Directory.GetFiles(itemsPath);
+                if (files.Length > 0)
+                {
+                    foreach (var f in files)
+                    {
+                        PlayerItems.Add(InventoryItem.LoadItemFile(f));
+                    }
+
+                    Console.WriteLine($"Loaded items from {itemsPath}");
+                }
+            }
+            else
+            {
+                Directory.CreateDirectory(itemsPath);
+                PlayerItems = ServerSetup.InitPlayerInventory(ServerConfig.CustomsPath);
+
+                foreach (var item in PlayerItems)
+                {
+                    InventoryItem.SaveItemFile(item, itemsPath);
+                }
+
+                if (PlayerItems.Count > 0)
+                    Console.WriteLine("Loaded items from dumped customs and created Items directory!");
+                else
+                    Console.WriteLine("Failed to load any items!");
+            }
+
             NewURL = $"{ServerConfig.Address}:{ServerConfig.Port}/";
 
             listener = new HttpListener();

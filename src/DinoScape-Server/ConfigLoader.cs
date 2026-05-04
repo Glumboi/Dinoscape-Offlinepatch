@@ -8,9 +8,10 @@ namespace DinoScape_Server
 {
     public class ServerConfig
     {
-        public string CustomsPath { get; set; } = "";
+        public string CustomsPath { get; set; } = "customs";
         public string Address { get; set; } = "http://localhost";
         public string Port { get; set; } = "8000";
+        public string ItemsLocation { get; set; } = "items";
         public bool UnlockAll { get; set; } = true;
 
         public const string CONFIG_FILE = "serverConf.ini";
@@ -27,8 +28,9 @@ namespace DinoScape_Server
                 Console.WriteLine($"Config not found: {path}, creating default config...");
 
                 var defaultConfig =
-            $@"CustomsPath=./customs
+            $@"CustomsPath=customs
 Address=http://localhost
+ItemsLocation=Items
 Port=8000
 UnlockAll=true";
 
@@ -65,6 +67,10 @@ UnlockAll=true";
 
                     case "Port":
                         cfg.Port = value;
+                        break;
+
+                    case "ItemsLocation":
+                        cfg.ItemsLocation = value;
                         break;
 
                     case "UnlockAll":

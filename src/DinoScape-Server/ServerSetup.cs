@@ -19,6 +19,33 @@ namespace DinoScape_Server
             public int Rarity { get; set; }
             public int PriceEmeralds { get; set; }
             public int PriceAmber { get; set; }
+
+
+            public override string ToString()
+            {
+                return $"eID: {ItemId}\n" +
+                       $"eName: {ItemInstanceId}\n" +
+                       $"eDescription: {Desc}\n" +
+                       $"eType: {Type}\n" +
+                       $"eRarity: {Rarity}\n" +
+                       $"price_emeralds: {PriceEmeralds}\n" +
+                       $"price_amber: {PriceAmber}";
+            }
+
+            public static void SaveItemFile(InventoryItem item, string folderPath)
+            {
+                string fileName = $"{item.ItemId}.asset.txt";
+                string fullPath = Path.Combine(folderPath, fileName);
+
+                File.WriteAllText(fullPath, item.ToString());
+            }
+
+            public static InventoryItem LoadItemFile(string path)
+            {
+                if (!File.Exists(path)) throw new FileNotFoundException($"File not found: {path}");
+                return ParseItemFile(path);
+            }
+
         }
 
         public static InventoryItem ParseItemFile(string path)
